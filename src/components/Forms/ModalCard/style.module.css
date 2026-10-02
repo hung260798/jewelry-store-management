@@ -1,0 +1,9 @@
+.root {
+  --depth: 1050;
+  z-index: auto;
+}
+
+.root div:global(.ant-modal-mask),
+.root div:global(.ant-modal-wrap) {
+  z-index: var(--depth);
+}

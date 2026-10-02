@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+.mainLayout {
+  transition: margin-left 0.2s ease-in-out;
+}
+
+.appTopbar {
+  min-height: 64px;
+  padding: 0 12px;
+}
+
+.appSiderToggle.ant-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d7e0ec;
+  border-radius: 10px;
+  color: #334155;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgb(15 23 42 / 9%);
+  transition:
+    color 0.18s ease,
+    border-color 0.18s ease,
+    background 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.appSiderToggle.ant-btn .anticon {
+  font-size: 18px;
+}
+
+.appSiderToggle.ant-btn:hover,
+.appSiderToggle.ant-btn:focus-visible {
+  color: #0f5fc7 !important;
+  border-color: #93c5fd;
+  background: #eff6ff !important;
+  box-shadow: 0 10px 24px rgb(37 99 235 / 16%);
+  transform: translateY(-1px);
+}
+
+.appSiderToggle.ant-btn:active {
+  transform: translateY(0);
+}
+
+.appSiderToggleInSider.ant-btn {
+  margin-right: 10px;
+}
+
+.appSider {
+  border-right: 1px solid #d8e0ea;
+  background:
+    linear-gradient(180deg, #f7fafc 0%, #eef2f7 100%), #f7fafc !important;
+  box-shadow: 8px 0 30px rgb(15 23 42 / 7%);
+}
+
+.appSiderProfile {
+  border-bottom: 1px solid #dbe3ef;
+  color: #172033;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 10px 28px rgb(15 23 42 / 6%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.appSiderProfile .ant-btn {
+  color: #334155;
+}
+
+.appSiderProfile .ant-btn:not(.appSiderToggle):hover {
+  color: #1677ff !important;
+  background: #eaf2ff !important;
+}
+
+.appSiderMenu.ant-menu {
+  padding: 10px 10px 18px;
+  border-inline-end: 0 !important;
+  background: transparent;
+  color: #334155;
+}
+
+.appSiderMenu.ant-menu .ant-menu-item,
+.appSiderMenu.ant-menu .ant-menu-submenu-title {
+  height: 42px;
+  line-height: 42px;
+  border-radius: 6px;
+  color: #334155;
+}
+
+.appSiderMenu.ant-menu .ant-menu-sub {
+  background: transparent !important;
+}
+
+.appSiderMenu.ant-menu .ant-menu-item:hover,
+.appSiderMenu.ant-menu .ant-menu-submenu-title:hover {
+  color: #1677ff !important;
+  background: #eaf2ff !important;
+}
+
+.appSiderMenu.ant-menu .ant-menu-submenu-selected > .ant-menu-submenu-title,
+.appSiderMenu.ant-menu .ant-menu-item-selected {
+  color: #0f5fc7 !important;
+  background: #eaf5ff !important;
+  font-weight: 700;
+}
+
+.appSiderMenu.ant-menu .ant-menu-submenu-arrow {
+  color: #64748b;
+}
+
+/* Increase font size for floating submenu */
+.ant-menu-submenu-popup {
+  font-size: 1.1rem !important;
+}
+
+/* .ant-image-mask {
+  border-radius: 8px;
+} */
+
+@media print {
+  body {
+    margin: 0 !important;
+  }
+}
+
+/* CK Editor */
+:root {
+  --ck-content-font-family: "Lato";
+  --ck-sidebar-width: 270px;
+}
+
+.main-container {
+  font-family: var(--ck-content-font-family);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-container .presence {
+  margin-bottom: 8px;
+}
+
+.editor-container__editor-wrapper {
+  display: flex;
+  width: fit-content;
+}
+
+@media screen and (width <= 1024px) {
+  .editor-container__editor-wrapper {
+    flex-direction: column;
+  }
+}
+
+.editor-container_include-outline
+  .editor-container__editor
+  .ck.ck-editor__editable {
+  margin-left: 0;
+}
+
+.editor-container_include-outline.editor-container_include-fullscreen
+  .ck-fullscreen__document-outline-header {
+  display: none;
+}
+
+.editor-container_include-annotations
+  .editor-container__editor
+  .ck.ck-editor__editable {
+  margin-right: 0;
+}
+
+.editor-container_include-annotations
+  .editor-container__editor
+  .ck.ck-toolbar__grouping {
+  flex-wrap: wrap;
+}
+
+.editor-container_classic-editor .editor-container__editor {
+  /* min-width: 795px;
+  max-width: 795px; */
+  width: calc(100% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.editor-container__sidebar {
+  min-width: var(--ck-sidebar-width);
+  max-width: var(--ck-sidebar-width);
+  margin-top: 28px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.editor-container__sidebar_ckeditor-ai:has(.ck-tabs.ck-hidden) {
+  max-width: 0;
+  min-width: 0;
+}
+
+.revision-history {
+  display: none;
+}
+
+.revision-history__wrapper {
+  display: flex;
+}
+
+.revision-history__wrapper .ck.ck-editor {
+  margin: 0;
+  width: 795px;
+}
+
+.revision-history__wrapper .revision-history__sidebar {
+  border: 1px solid var(--ck-color-base-border);
+  border-left: 0;
+  width: var(--ck-sidebar-width);
+  min-height: 100%;
+}
+
+.revision-history__wrapper
+  .revision-history__sidebar
+  .ck-revision-history-sidebar {
+  height: 100%;
+}

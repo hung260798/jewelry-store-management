@@ -1,0 +1,5 @@
+.itemCard :global(.ant-card-body) {
+  box-sizing: border-box;
+  height: 6rem;
+  overflow: hidden;
+}
